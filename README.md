@@ -2,6 +2,7 @@
 webhook経由のStatus  
 
 ## https://github.com/bbo51dog/PMDiscordAPI が必要です！！  
+## ConfigからWebhookURLを貼ってください！！  
 
 ## 利用について  
 ### 当プラグインでは以下の行為をすることは許可されません  
