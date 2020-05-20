@@ -19,10 +19,10 @@ Class Main extends PluginBase
     	$date = date("G:i");
         $content = new Content();
         $content->setText(">> Open \n Time > ".$date);
-        $webhook = Sender::create("")
+        $webhook = Sender::create("https://discordapp.com/api/webhooks/712400360014086217/N7ckUq7lTqUzbPe8Tefc7rkVTeg-K09EqOE1Rib0N1-wGUb_ArC0AoJFYwe7WPdyxad2")
             ->add($content)
             ->setCustomName("ServerOpen")
-            ->setCustomAvatar("http://flat-icon-design.com/f/f_business_64/s512_f_business_64_2bg.png");
+            ->setCustomAvatar("https://user-images.githubusercontent.com/47268002/82444806-bea31f00-9ade-11ea-9181-0e6b5a3fe254.png");
         Sender::send($webhook);
     }
 
@@ -31,10 +31,10 @@ Class Main extends PluginBase
     	$date = date("G:i");
         $content = new Content();
         $content->setText(">> Stop \n Time > ".$date);
-        $webhook = Sender::create("")
+        $webhook = Sender::create("https://discordapp.com/api/webhooks/712400360014086217/N7ckUq7lTqUzbPe8Tefc7rkVTeg-K09EqOE1Rib0N1-wGUb_ArC0AoJFYwe7WPdyxad2")
             ->add($content)
             ->setCustomName("ServerStop")
-            ->setCustomAvatar("http://flat-icon-design.com/f/f_business_64/s512_f_business_64_0bg.png");
+            ->setCustomAvatar("https://user-images.githubusercontent.com/47268002/82444811-bfd44c00-9ade-11ea-9feb-27d78310903e.png");
         Sender::send($webhook); 	
     }
 }
