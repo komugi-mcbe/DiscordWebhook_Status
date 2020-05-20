@@ -12,10 +12,10 @@ use bbo51dog\pmdiscord\element\Content;
 
 class EventListener implements Listener 
 {
-	public function onJoin(PlayerJoinEvent $event)
+        public function onJoin(PlayerJoinEvent $event)
 	{
-		$player = $event->getPlayer();
-		$name = $player->getName();
+        $player = $event->getPlayer();
+	$name = $player->getName();
     	$date = date("G:i");
         $content = new Content();
         $content->setText(">> Join ".$name." \n Time > ".$date);
@@ -28,8 +28,8 @@ class EventListener implements Listener
 
 	public function onQuit(PlayerQuitEvent $event)
 	{
-		$player = $event->getPlayer();
-		$name = $player->getName();
+	$player = $event->getPlayer();
+	$name = $player->getName();
     	$date = date("G:i");
         $content = new Content();
         $content->setText(">> Quit ".$name." \n Time > ".$date);
