@@ -15,14 +15,14 @@ class EventListener implements Listener
 {
     private $Main;
 
-    public function _construct(Main $Main)
+    public function __construct(Main $Main)
     {
-        $Main = $this->Main;
+        $this->Main = $Main;
     }
 
     public function onJoin(PlayerJoinEvent $event)
     {
-        $token = $Main->config->get('token');
+        $token = $this->Main->config->get('token');
         $player = $event->getPlayer();
         $name = $player->getName();
         $date = date("G:i");
@@ -37,7 +37,7 @@ class EventListener implements Listener
 
     public function onQuit(PlayerQuitEvent $event)
     {
-        $token = $Main->config->get('token');
+        $token = $this->Main->config->get('token');
         $player = $event->getPlayer();
         $name = $player->getName();
         $date = date("G:i");

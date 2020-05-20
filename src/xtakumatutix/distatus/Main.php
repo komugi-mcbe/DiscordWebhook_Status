@@ -13,6 +13,7 @@ use bbo51dog\pmdiscord\element\Content;
 
 Class Main extends PluginBase 
 {
+
     public function onEnable() 
     {
         $this->getLogger()->notice("起動メッセージを送信しました - ver.".$this->getDescription()->getVersion());
@@ -33,8 +34,8 @@ Class Main extends PluginBase
 
     public function onDisable()
     {
-        $this->getLogger()->notice("停止メッセージを送信しました");
         $token = $this->config->get('token');
+        $this->getLogger()->notice("停止メッセージを送信しました");
         $date = date("G:i");
         $content = new Content();
         $content->setText(">> Stop \n Time > ".$date);
